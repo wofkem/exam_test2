@@ -27,13 +27,12 @@
     }
    
     // 가장 가격이 싼 책 찾는 부분 완성하시오
-    let most = bookArray[0];        
-    let min = bookArray[0].price;
-    for(let i=1; i<bookArray.length+1; i++){
-        if(min>=bookArray[i].price){
-            most=bookArray[i];
-        }
+    let most = bookArray[0];
+    for (let i = 1; i < bookArray.length; i++) {
+    if(most.price>bookArray[i].price){
+        most=bookArray[i];
     }
+  }
     document.write("<hr>가장 가격이 싼 책은 " + most.title);
 </script>
 </body>
